@@ -7,11 +7,11 @@
       </template>
       <template v-else-if="computedResult > 10">
         <h1>残念！</h1>
-        <p>🤣</p>
+        <p class="shake">🤣</p>
       </template>
       <template v-else-if="computedResult > 1">
         <h1>惜しい！！</h1>
-        <p>😂</p>
+        <p class="shake">😂</p>
       </template>
       <template v-else-if="computedResult === 1">
         <h1>もう少し！！！</h1>
@@ -55,8 +55,7 @@ const computedResult = computed(() => result.value === 0 ? 1 : result.value)
 .container {
   display: grid;
   place-items: center;
-  padding: 10vh 0;
-  height: 100vh;
+  height: 90vh;
 }
 
 .result-text {
@@ -68,6 +67,9 @@ const computedResult = computed(() => result.value === 0 ? 1 : result.value)
 
   p {
     font-size: 4em;  
+  }
+
+  .shake {
     animation: hurueru .1s  infinite;
   }
 }
@@ -85,6 +87,7 @@ const computedResult = computed(() => result.value === 0 ? 1 : result.value)
   border-radius: 9999999px;
   text-decoration: none;
   font-weight: bold;
+  margin-bottom: auto;
 }
 
 $val: 0.1em;

@@ -14,5 +14,6 @@ body {
     "BIZ UDPGothic",
     Meiryo,
     sans-serif;
+  overflow: hidden;
 }
 </style>

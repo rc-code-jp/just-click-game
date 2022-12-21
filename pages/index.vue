@@ -51,14 +51,15 @@ onBeforeUnmount(() => {
 <style lang="scss" scoped>
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   display: grid;
   place-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .title {
-  position: fixed;
+  position: absolute;
   top: 10vh;
   opacity: 0.7;
   font-size: 1.2em;
