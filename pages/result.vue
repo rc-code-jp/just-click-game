@@ -4,6 +4,7 @@
     <div class="result-text">
       <template v-if="computedResult > 50">
         <h1>m9(^Д^)</h1>
+        <p class="shake">🤣</p>
       </template>
       <template v-else-if="computedResult > 10">
         <h1>残念！</h1>
