@@ -78,6 +78,8 @@ const computedResult = computed(() => result.value === 0 ? 1 : result.value)
 .result-value {
   margin-top: auto;
   font-size: 0.9em;
+  font-weight: bold;
+  margin-bottom: 1em;
 }
 
 .challenge {
