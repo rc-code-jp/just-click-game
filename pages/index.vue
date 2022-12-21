@@ -14,13 +14,13 @@
 
 <script lang="ts" setup>
 const goalPer = 10;
-const movePer = ref<number>(100);
+const movePer = ref<number>(100 + goalPer);
 
 let timerId: NodeJS.Timer;
 
 const move = () => {
   if (movePer.value <= goalPer) {
-    movePer.value = 100
+    movePer.value = 100 + goalPer
   } else {
     movePer.value -= 2
   }

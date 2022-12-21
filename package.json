@@ -13,5 +13,9 @@
   },
   "dependencies": {
     "modern-css-reset": "^1.4.0"
+  },
+  "volta": {
+    "node": "16.18.1",
+    "yarn": "1.22.19"
   }
 }
