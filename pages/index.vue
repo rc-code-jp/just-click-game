@@ -1,13 +1,13 @@
 <template>
   <div class="container" @click="goResult">
     <h1 class="title">タイミングよくタップ！</h1>
-    <div id="move-circle" :style="{
-      width: `${movePer}vh`,
-      height: `${movePer}vh`
-    }"></div>
     <div id="center-circle" :style="{
       width: `${goalPer}vh`,
       height: `${goalPer}vh`
+    }"></div>
+    <div id="move-circle" :style="{
+      width: `${movePer}vh`,
+      height: `${movePer}vh`
     }"></div>
   </div>
 </template>
