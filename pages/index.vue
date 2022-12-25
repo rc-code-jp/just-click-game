@@ -1,13 +1,13 @@
 <template>
-  <div class="container" @click="goResult">
+  <div class="container" @touchstart="goResult" @mousedown="goResult">
     <h1 class="title">タイミングよくタップ！</h1>
-    <div id="center-circle" :style="{
-      width: `${goalPer}vh`,
-      height: `${goalPer}vh`
-    }"></div>
     <div id="move-circle" :style="{
       width: `${movePer}vh`,
       height: `${movePer}vh`
+    }"></div>
+    <div id="center-circle" :style="{
+      width: `${goalPer}vh`,
+      height: `${goalPer}vh`
     }"></div>
   </div>
 </template>
@@ -67,15 +67,19 @@ onBeforeUnmount(() => {
 
 #move-circle {
   position: absolute;
-  border-radius: 50%;
-  border: 3px solid coral;
   background-color: transparent;
+  background-image: url('~/assets/images/heart1.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
 #center-circle {
   position: absolute;
   background-color: transparent;
-  border-radius: 50%;
-  border: 3px solid cornflowerblue;
+  background-image: url('~/assets/images/heart2.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 </style>

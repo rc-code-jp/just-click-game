@@ -29,7 +29,7 @@
         {{ computedResult }}%
       </output>
     </p>
-    <NuxtLink class="challenge" :to="{name: 'index'}">
+    <NuxtLink :class="['challenge-button', {disabled: disableButton}]" :to="{name: 'index'}">
       もういっかい！
     </NuxtLink>
   </div>
@@ -48,8 +48,18 @@ definePageMeta({
 })
 
 const result = useState<number>('result')
+
 // 絶対に0にしない（成功させない）
 const computedResult = computed(() => result.value === 0 ? 1 : result.value)
+
+// 初期状態ではボタンを押せなくする
+const disableButton = ref(true)
+
+onMounted(() => {
+  setTimeout(() => {
+    disableButton.value = false
+  }, 500)
+}) 
 </script>
 
 <style lang="scss" scoped>
@@ -82,7 +92,7 @@ const computedResult = computed(() => result.value === 0 ? 1 : result.value)
   margin-bottom: 1em;
 }
 
-.challenge {
+.challenge-button {
   font-size: 1em;
   background-color: #ff0081;
   color: azure;
@@ -91,6 +101,12 @@ const computedResult = computed(() => result.value === 0 ? 1 : result.value)
   text-decoration: none;
   font-weight: bold;
   margin-bottom: auto;
+  transition: all 0.3s ease;
+
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 }
 
 $val: 0.1em;
