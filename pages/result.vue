@@ -16,7 +16,7 @@
       </template>
       <template v-else-if="computedResult === 1">
         <h1>もう少し！！！</h1>
-        <p>😉</p>
+        <p>💔</p>
       </template>
       <template v-else>
         <h1>おめでとう</h1>
