@@ -26,7 +26,6 @@ const move = () => {
   }
 }
 
-
 const result = useState<number>('result', () => 0)
 
 const goResult = () => {
@@ -63,6 +62,7 @@ onBeforeUnmount(() => {
   top: 10vh;
   opacity: 0.7;
   font-size: 1.2em;
+  z-index: 10000;
 }
 
 #move-circle {
